@@ -1,14 +1,66 @@
 * {
     box-sizing: border-box;
 }
-body {
-    background-color: #fff;
 
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    background-color: #fff;
+}
+
+header {
+    background: orange;
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: sticky;
+    top: 0;/* il faut indiquer ou positionner le sticky objet */
+}
+
+h1 {
+    text-align: center;
+    background-color: #3332;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    height: 100px;
 }
 
 
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 
-.conteneur {
+nav a:hover {
+    color: orange;
+    font-weight: bold;
+    border: 1px solid whitesmoke;
+    box-shadow: orange;
+    
+
+}
+
+section.main{
+    display: flex;
+    width: 1200px;
+    /* height: 100vh; */
+    background-color: green;
+    /* flex-grow: 1; */
+    /* padding: 1.5rem; */
+    /* Sticky footer */
+    flex: 1;
+}
+
+.main {
     margin: 0 auto;
     background-color: #fff;
     width: 1000px;
@@ -19,42 +71,42 @@ body {
     flex-direction: column;
 }
 
-main {
-    /* main est flex pour mettre le footer en bas */
-    flex: 1;
-    
-}
-
 footer {
-    flex-shrink: 0;
-}
-
-header {
-    text-align: center;/* aligne les textes au centre */
-
-}
-
-
-
-
-nav {
-    height: 80px;
-    margin-bottom: 10px;
-    line-height: 80px;
-     
-}
-/* l'élément menu est flex  */
-#menu {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100px;
+    /* background-color: #3333; */
+    width: 100%;
+    /* margin-top: 1.5rem; */
+    /* Sticky footer */
+    flex-shrink: 0;
+    text-align: center;
+  
+   
+}
+
+.dolomite_1 {
+    background-image: url(../img/dolomite_1.jfif) no-repeat;
+    object-position: 50% 50%;
+}
+
+footer a {
+   text-decoration: none;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #fff;
+
 
 }
 
-/* #menu nav a {
-    
-} */
 
+.contenu {
+    height: 200rem;
+    background-color: beige;
+    padding: 2rem;
+    margin: 1em;
 
+}
 
 
 
@@ -67,6 +119,8 @@ nav {
     margin-bottom: 15px;
     /* border: 1px solid #000 */
 }
+
+
 
 .row-reverse {
     display: flex;
@@ -98,6 +152,10 @@ nav {
 
 .bleu {
     background-color: rgba(91, 101, 236, 0.356);
+}
+
+.orange {
+    background-color: orange;
 }
 
 /* définition de la largeurs des colonnes en % */
@@ -222,7 +280,7 @@ nav {
     body {
         background-color: #fff;
     }
-    .conteneur {
+    .main {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -254,7 +312,7 @@ nav {
         background: #fff;
     }
 
-    .conteneur {
+    .main {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -293,7 +351,7 @@ nav {
         background: #fff;
     }
 
-    .conteneur {
+    .main {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
@@ -308,17 +366,11 @@ nav {
         background: #fff;
     }
 
-    .conteneur {
+    .main {
         width: 1200px;
         margin: 0 auto;
         border: 1px solid #000;
         background: orange;
     }
-
-
-
-
-
-
 
 }
